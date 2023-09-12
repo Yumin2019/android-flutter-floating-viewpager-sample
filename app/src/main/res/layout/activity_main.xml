@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="com.coupleblog.MainActivityBinding">
+
+        <variable
+            name="activity"
+            type="org.tensorflow.lite.examples.objectdetection.MainActivity" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <org.tensorflow.lite.examples.objectdetection.circlemenu.CircleMenu
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="32dp"
+            android:layout_marginBottom="100dp"
+            app:buttonColors="@array/colors"
+            app:buttonIcons="@array/icons"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:maxAngle="140"
+            app:menuIcon="plus"
+            app:showSelectAnimation="false"
+            app:startAngle="-180"
+            tools:layout_height="32dp"
+            tools:layout_width="32dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
